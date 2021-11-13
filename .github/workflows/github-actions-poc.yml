@@ -1,0 +1,14 @@
+name: "Newman Tests"
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: 
+      image: postman/newman
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run API Tests
+        run: newman run 112020_GlobalGO_Elev_Integration.postman_collection.json -e UAT.postman_environment.json
