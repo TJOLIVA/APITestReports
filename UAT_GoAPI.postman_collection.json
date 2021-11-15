@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "2a751789-1369-4f75-8058-e03b8b000d68",
+		"name": "UAT_GoAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "08 - Negative Scenarios Copy",
+			"item": [
+				{
+					"name": "08 - Terms not accepted with Subscription",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"bodyJSON = JSON.parse(responseBody)",
+									"value1 = bodyJSON.token",
+									"value2 = bodyJSON.refreshToken",
+									"pm.environment.set(\"bearerToken\", value1);",
+									"pm.environment.set(\"loginToken\", value2);",
+									"console.log(value1)",
+									"console.log(value2)",
+									"",
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Terms of use is not yet accepted.\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000005\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. The user has not accepted the terms of use yet.\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "glgoelteacher_qa_prvtest1@pte-mailbox.cambridgedev.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "08 - Terms not accepted with No Subscription",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"bodyJSON = JSON.parse(responseBody)",
+									"value1 = bodyJSON.token",
+									"value2 = bodyJSON.refreshToken",
+									"pm.environment.set(\"bearerToken\", value1);",
+									"pm.environment.set(\"loginToken\", value2);",
+									"console.log(value1)",
+									"console.log(value2)",
+									"",
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Terms of use is not yet accepted.\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000005\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. The user has not accepted the terms of use yet.\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "glgoelstudent_qa_prvtest1@pte-mailbox.cambridgedev.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "08 - Invalid Login - No Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"    pm.expect(pm.response.text()).to.include(\"errors\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Incorrect email or password format\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000007\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Make sure email or password format is correct and is present\")",
+									"    pm.expect(pm.response.text()).to.include(\"required validation failed on password\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "toliva@cambridge.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "08 - Invalid Login - No Email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"    pm.expect(pm.response.text()).to.include(\"errors\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Incorrect email or password format\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000007\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Make sure email or password format is correct and is present\")",
+									"    pm.expect(pm.response.text()).to.include(\"required validation failed on email\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "08 - Invalid Login - No Email and Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(422);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"    pm.expect(pm.response.text()).to.include(\"errors\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Incorrect email or password format\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000007\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Make sure email or password format is correct and is present\")",
+									"    pm.expect(pm.response.text()).to.include(\"required validation failed on email\")",
+									"    pm.expect(pm.response.text()).to.include(\"required validation failed on password\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "08 - Invalid Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"bodyJSON = JSON.parse(responseBody)",
+									"value1 = bodyJSON.token",
+									"value2 = bodyJSON.refreshToken",
+									"pm.environment.set(\"bearerToken\", value1);",
+									"pm.environment.set(\"loginToken\", value2);",
+									"console.log(value1)",
+									"console.log(value2)",
+									"",
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"success\")",
+									"    pm.expect(pm.response.text()).to.include(\"message\")",
+									"    pm.expect(pm.response.text()).to.include(\"code\")",
+									"    pm.expect(pm.response.text()).to.include(\"description\")",
+									"});",
+									"pm.test(\"Verify correct error message is thrown\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. Incorrect email or password.\")",
+									"    pm.expect(pm.response.text()).to.include(\"21000003\")",
+									"    pm.expect(pm.response.text()).to.include(\"Unable to login. The email or the password is incorrect.\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "toliva@cambridge.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pashwerd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
