@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "cfb87e4c-d76f-42ca-aa51-717496d1b7fe",
+		"name": "QASE API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "04 - EXPIRED GOELEV SUBS Copy",
+			"item": [
+				{
+					"name": "04 - Generate Login Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"bodyJSON = JSON.parse(responseBody)",
+									"value1 = bodyJSON.token",
+									"value2 = bodyJSON.refreshToken",
+									"pm.environment.set(\"bearerToken\", value1);",
+									"pm.environment.set(\"loginToken\", value2);",
+									"",
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"type\")",
+									"    pm.expect(pm.response.text()).to.include(\"token\")",
+									"    pm.expect(pm.response.text()).to.include(\"refreshToken\")",
+									"    pm.expect(pm.response.text()).to.include(\"user_id\")",
+									"});",
+									"pm.test(\"Verify correct UID of user\", function () {",
+									"    var myUID = bodyJSON.user_id",
+									"    var frGigya = pm.environment.get(\"user5UID\");",
+									"    pm.expect(myUID).to.be.equals(frGigya) //from Gigya console",
+									"    console.log(myUID)",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "glgoelteacher_qa_test3@pte-mailbox.cambridgedev.org",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/services/gigya/login/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"services",
+								"gigya",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 - Get Entitlement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).not.to.include(\"book_id\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/integrations/{{client_id}}/userResources/",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"integrations",
+								"{{client_id}}",
+								"userResources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 - Refresh Login Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify Successful API response\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Verify complete JSON response\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"type\")",
+									"    pm.expect(pm.response.text()).to.include(\"token\")",
+									"    pm.expect(pm.response.text()).to.include(\"refreshToken\")",
+									"    pm.expect(pm.response.text()).not.to.include(\"user_id\")",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh_token",
+									"value": "{{loginToken}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://go-api-qa.cambridgedev.org/v1/token/refresh",
+							"protocol": "https",
+							"host": [
+								"go-api-qa",
+								"cambridgedev",
+								"org"
+							],
+							"path": [
+								"v1",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
