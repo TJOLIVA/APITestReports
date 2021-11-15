@@ -29,7 +29,7 @@ jobs:
         
    # Run the POSTMAN collection
       - name: Run API Tests
-        run: newman run 112020_GlobalGO_Elev_Integration.postman_collection.json -e UAT.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
+        run: newman run "GlobalGO_Elev_Integration.postman_collection.json" -e UAT.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
 
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
