@@ -1,6 +1,6 @@
 # This workflow will help you to produce an HTML extra test results report
 
-name: Newman Tests
+name: TJ newman+github-actions POC
 on: [push, pull_request]
 
 jobs:
