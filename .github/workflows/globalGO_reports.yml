@@ -1,6 +1,6 @@
 # This workflow will help you to produce an HTML extra test results report
 
-name: with FAILED Newman Test
+name: GO API with FAILURES
 on: [push, pull_request]
 
 jobs:
