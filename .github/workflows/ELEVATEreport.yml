@@ -29,11 +29,14 @@ jobs:
         
    # Run the POSTMAN collection
       - name: Run API Tests
-        run: newman run "GlobalGO_Elev_Integration.postman_collection.json" -e UAT.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
+        if: always()
+        run: newman run Sample_collection_with_FAILURES.json -e UAT.postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
 
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
+        if: always()
         uses: actions/upload-artifact@v2
         with: 
           name: RunReports
+          if: always()
           path: testResults
