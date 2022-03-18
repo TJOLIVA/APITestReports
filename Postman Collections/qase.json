@@ -29,8 +29,8 @@
         "auth": {
           "type": "apikey",
           "apikey": {
-            "key": "token",
-            "value": "347d3bff44ab41aca412421ecf1d41a33ad29919",
+            "value": "",
+            "key": "",
             "in": "header"
           }
         },
@@ -49,7 +49,7 @@
           }
         ],
         "url": {
-          "raw": "https://api.qase.io/v1/project?limit=50&offset=0",
+          "raw": "https://api.qase.io/v1/project?limit=60&offset=0",
           "protocol": "https",
           "host": [
             "api",
@@ -63,7 +63,7 @@
           "query": [
             {
               "key": "limit",
-              "value": "50"
+              "value": "60"
             },
             {
               "key": "offset",
