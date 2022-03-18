@@ -1,0 +1,54 @@
+{
+  "info": {
+    "_postman_id": "35f32398-b130-492e-9b9d-6fcf29bd1af4",
+    "name": "QASE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "QASE projects list",
+      "_postman_id": "9aa14a38-2296-4aa3-9b86-38422e2b2a2a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": {}
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.qase.io/v1/project?limit=10&offset=0",
+          "protocol": "https",
+          "host": [
+            "api",
+            "qase",
+            "io"
+          ],
+          "path": [
+            "v1",
+            "project"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
