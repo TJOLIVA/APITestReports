@@ -74,5 +74,34 @@
       },
       "response": []
     }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": {
+      "value": "347d3bff44ab41aca412421ecf1d41a33ad29919",
+      "key": "token "
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "e06492c1-e126-43a5-a27e-3697c89d64ff",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "6d5a57fe-90ee-4f84-926a-999bd00c8a22",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
   ]
 }
