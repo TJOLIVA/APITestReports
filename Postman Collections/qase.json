@@ -7,7 +7,7 @@
   "item": [
     {
       "name": "QASE projects list",
-      "_postman_id": "9aa14a38-2296-4aa3-9b86-38422e2b2a2a",
+      "id": "9aa14a38-2296-4aa3-9b86-38422e2b2a2a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -47,6 +47,18 @@
             }
           ]
         }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "661d3e65-0a01-44d8-ad12-26d9ff6f9090",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": []
       },
       "response": []
     }
