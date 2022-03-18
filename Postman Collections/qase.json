@@ -7,6 +7,20 @@
   "item": [
     {
       "name": "QASE projects list",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "9b3d54b9-5aa6-4116-ab07-0bc825376c96",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "id": "9aa14a38-2296-4aa3-9b86-38422e2b2a2a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -14,7 +28,11 @@
       "request": {
         "auth": {
           "type": "apikey",
-          "apikey": {}
+          "apikey": {
+            "key": "token",
+            "value": "347d3bff44ab41aca412421ecf1d41a33ad29919",
+            "in": "header"
+          }
         },
         "method": "GET",
         "header": [
@@ -22,10 +40,16 @@
             "key": "Accept",
             "value": "application/json",
             "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
           }
         ],
         "url": {
-          "raw": "https://api.qase.io/v1/project?limit=10&offset=0",
+          "raw": "https://api.qase.io/v1/project?limit=50&offset=0",
           "protocol": "https",
           "host": [
             "api",
@@ -39,7 +63,7 @@
           "query": [
             {
               "key": "limit",
-              "value": "10"
+              "value": "50"
             },
             {
               "key": "offset",
