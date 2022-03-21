@@ -142,6 +142,75 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "QASE projects list Copy 2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "9b3d54b9-5aa6-4116-ab07-0bc825376c96",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(400);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "b1c27e30-b017-4587-96ab-5922ab9be06e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": {
+            "value": "347d3bff44ab41aca412421ecf1d41a33ad29919",
+            "key": "token",
+            "in": "header"
+          }
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "https://api.qase.io/v1/project?limit=60&offset=0",
+          "protocol": "https",
+          "host": [
+            "api",
+            "qase",
+            "io"
+          ],
+          "path": [
+            "v1",
+            "project"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "60"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ],
   "auth": {
