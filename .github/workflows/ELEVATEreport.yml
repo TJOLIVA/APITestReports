@@ -36,13 +36,5 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run:
-          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json \
-          -r qase \
-          --reporter-qase-logging \
-          --reporter-qase-projectCode ELEV \
-          --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 \
-          --reporter-qase-runId 123 \
-          --reporter-qase-basePath https://api.qase.io/v1 \
-          --reporter-qase-runName "API test Execution" \
-          --reporter-qase-runDescription "Check API consistency" \
-          -x
+          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json -r qase --reporter-qase-logging --reporter-qase-projectCode EDUC --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4
+    
