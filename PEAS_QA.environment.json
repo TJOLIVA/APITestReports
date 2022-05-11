@@ -1,0 +1,74 @@
+{
+	"id": "7352d057-fad8-47fe-91ef-22cb6a545ed3",
+	"name": "PEAS QA V2 (UAT)",
+	"values": [
+		{
+			"key": "domain",
+			"value": "https://peas-api-qa.cambridgedev.org/",
+			"enabled": true
+		},
+		{
+			"key": "origin_url",
+			"value": "cambridge.edu.au",
+			"enabled": true
+		},
+		{
+			"key": "secret_key",
+			"value": "test1234",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTU5MDc0MTQ2OCwiZXhwIjoxNTkwNzQ4NjY4fQ.6B29VrdINpq8PEBRlwyidwwgVAUwmfeb_6t62VhmsYs",
+			"enabled": true
+		},
+		{
+			"key": "URL",
+			"value": "https://peas-api-qa.cambridgedev.org/v2",
+			"enabled": true
+		},
+		{
+			"key": "invalidtoken",
+			"value": "asfagasfgasfag",
+			"enabled": true
+		},
+		{
+			"key": "URL1",
+			"value": "https://peas-api-qa.cambridgedev.org/v2",
+			"enabled": true
+		},
+		{
+			"key": "product_id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "permission_id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "entitlement_id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "batch_id",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "proof",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "refresh_token",
+			"value": "{{refreshtoken}}",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-08-20T05:55:23.623Z",
+	"_postman_exported_using": "Postman/8.10.0"
+}
