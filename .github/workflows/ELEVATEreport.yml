@@ -41,7 +41,7 @@ jobs:
           --reporter-qase-logging \
           --reporter-qase-projectCode ELEV \
           --reporter-qase-apiToken 347d3bff44ab41aca412421ecf1d41a33ad29919 \
-          --reporter-qase-runId 26 \
+          --reporter-qase-runId 123 \
           --reporter-qase-basePath https://api.qase.io/v1 \
           --reporter-qase-runName "API test Execution" \
           --reporter-qase-runDescription "Check API consistency" \
