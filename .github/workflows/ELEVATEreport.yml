@@ -1,7 +1,15 @@
 # This workflow will help you to produce an HTML extra test results report
 
 name: with FAILED Newman Test
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Release name'     
+        required: true
+        default: 'Sprint 1'
+      tags:
+        description: 'Test run name'
 
 jobs:
   test-api:
