@@ -36,7 +36,7 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run: QASE_RUN_ID=34
-          newman run Sample_collection_with_FAILURES.json -e UAT.postman_environment.json
+          newman run PEAS.collection.json -e PEAS_QA.environment.json
           -r qase \
           --reporter-qase-logging \
           --reporter-qase-projectCode EDUC \
