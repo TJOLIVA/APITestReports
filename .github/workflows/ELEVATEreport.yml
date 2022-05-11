@@ -39,7 +39,6 @@ jobs:
         if: always()
         run: newman run Sample_collection_with_FAILURES.json -e UAT.postman_environment.json
           -r qase \
-          --reporter-qase-logging \
           --reporter-qase-projectCode project_code \
           --reporter-qase-apiToken api_token \
           --reporter-qase-runId 34 \
