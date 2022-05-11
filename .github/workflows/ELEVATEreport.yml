@@ -31,8 +31,7 @@ jobs:
 
       - name: Install qase reporter
         run: |
-          npm install newman-reporter-qase
-
+          npm install -g newman-reporter-qase
         
    # Run the POSTMAN collection
       - name: Run API Tests
@@ -46,4 +45,3 @@ jobs:
           --reporter-qase-runName "API test Execution" \
           --reporter-qase-runDescription "Check API consistency" \ 
           -x
-
