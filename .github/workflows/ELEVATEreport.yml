@@ -36,7 +36,7 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run:
-          newman run GlobalGO.collection.json -e GlobalGO_QA.environment.json
+          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json
           -r qase\
           --reporter-qase-logging\
           --reporter-qase-projectCode EDUC\
