@@ -25,10 +25,13 @@ jobs:
           node-version: '16.x'
 
     
-    # Install the newman command line utility and also install the html extra reporter
+    # Install the newman
       - name: Install newman
         run: |
           npm install -g newman
+
+      - name: Install qase reporter
+        run: |
           npm install newman-reporter-qase
           
     # Make directory to upload the test results
