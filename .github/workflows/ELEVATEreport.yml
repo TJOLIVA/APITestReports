@@ -39,7 +39,7 @@ jobs:
           newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json \
           -r qase \
           --reporter-qase-logging \
-          --reporter-qase-projectCode EDUC \
+          --reporter-qase-projectCode ELEV \
           --reporter-qase-apiToken 347d3bff44ab41aca412421ecf1d41a33ad29919 \
           --reporter-qase-runId 26 \
           --reporter-qase-basePath https://api.qase.io/v1 \
