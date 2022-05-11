@@ -23,7 +23,6 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: '16.x'
-
     
     # Install the newman
       - name: Install newman
@@ -33,28 +32,17 @@ jobs:
       - name: Install qase reporter
         run: |
           npm install newman-reporter-qase
-          
-    # Make directory to upload the test results
-      - name: Make Directory for results
-        run: mkdir -p testResults
+
         
    # Run the POSTMAN collection
       - name: Run API Tests
         if: always()
         run: newman run Sample_collection_with_FAILURES.json -e UAT.postman_environment.json 
-          -r qase 
-          --reporter-qase-logging 
+          -r qase
           --reporter-qase-projectCode EDUC
           --reporter-qase-apiToken 347d3bff44ab41aca412421ecf1d41a33ad29919
           --reporter-qase-runId 34
           --reporter-qase-basePath https://api.qase.io/v1
           --reporter-qase-runName "API test Execution"
           --reporter-qase-runDescription "Check API consistency"
-    # Upload the contents of Test Results directory to workspace
-      - name: Output the run Details
-        if: always()
-        uses: actions/upload-artifact@v2
-        with: 
-          name: RunReports
-          if: always()
-          path: testResults
+
