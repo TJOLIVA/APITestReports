@@ -36,4 +36,4 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run:
-          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json -r qase --reporter-qase-logging --reporter-qase-projectCode ELEV --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4
+          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json -r qase --reporter-qase-logging --reporter-qase-projectCode ELEV --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 --reporter-qase-runName "API test Execution"
