@@ -15,7 +15,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 1 2 3",
+									"//qase: 41 42 43",
 									"\r",
 									"tests[\"Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 200\"] = responseCode.code === 200;\r",
 									"\r",
@@ -62,7 +62,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 4 5 6",
+									"//qase: 44 45 46",
 									"\r",
 									"tests[\"Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401\"] = responseCode.code === 401;\r",
 									"\r",
@@ -107,7 +107,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 7 8 9",
+									"//qase: 47 48 49",
 									"\r",
 									"tests[\"Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401\"] = responseCode.code === 401;\r",
 									"\r",
@@ -152,7 +152,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 10 11 12",
+									"//qase: 50 51 52",
 									"\r",
 									"tests[\"Verify that a client of web service with valid refresh token when refreshing authorization is able to get a response code 200\"] = responseCode.code === 200;\r",
 									"\r",
@@ -198,7 +198,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 13 14 15",
+									"//qase: 53 54 55",
 									"\r",
 									"tests[\"Verify that a client of web service with invalid refresh token when refreshing authorization is able to get a response code 401\"] = responseCode.code === 401;\r",
 									"\r",
