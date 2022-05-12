@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "6c065a39-4499-4780-b3dd-49e0ac3cbf69",
+		"name": "PEAS Collection PoC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Creating auth token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//qase: 1\r",
+									"\r",
+									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 200', function () {\r",
+									"    pm.response.to.be.info\r",
+									"})\r",
+									"\r",
+									"var data = JSON.parse(responseBody);\r",
+									"tests[\"Verify that a client of web service with valid origin url when generating a authtoken is able to get a response message Token successfully created.\"] = data.message === \"Token successfully created.\";\r",
+									"\r",
+									"tests[\"Verify Success message is true\"] = data.success === true;\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"refreshtoken\", jsonData.data.refreshToken);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"origin_url\" : \"{{origin_url}}\",\r\n\t\"secret_key\" : \"{{secret_key}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unauthorized with invalid secret key creation of auth token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//qase: 2\r",
+									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401', function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"})\r",
+									"\r",
+									"var data = JSON.parse(responseBody);\r",
+									"tests[\"Verify that a client of web service with invalid secret key when generating a authtoken is able to get a response message Unable to generate token.\"] = data.message === \"Unable to generate token.\";\r",
+									"\r",
+									"tests[\"Verify Success message is false\"] = data.success === false;\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"origin_url\" : \"{{origin_url}}\",\r\n\t\"secret_key\" : \"Unauthorized\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unauthorized with invalid  origin url creation of auth token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//qase: 3\r",
+									"\r",
+									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401', function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"})\r",
+									"\r",
+									"var data = JSON.parse(responseBody);\r",
+									"tests[\"Verify that a client of web service with invalid origin url when generating a authtoken is able to get a response message Unable to generate token.\"] = data.message === \"Unable to generate token.\";\r",
+									"\r",
+									"tests[\"Verify Success message is false\"] = data.success === false;\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"origin_url\" : \"cambridge.edu.au/go\",\r\n\t\"secret_key\" : \"83wue1eYyGX7Bs6pG8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generates new JWT using Refresh Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//qase: 4\r",
+									"\r",
+									"pm.test(\"Verify that a client of web service with valid refresh token when refreshing authorization is able to get a response code 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var data = JSON.parse(responseBody);\r",
+									"tests[\"Verify that a client of web service with valid refresh token when refreshing authorization is able to get a message 'Token successfully refreshed.'.\"] = data.message === \"Token successfully refreshed.\";\r",
+									"\r",
+									"tests[\"Verify Success message is true\"] = data.success === true;\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"refresh_token\" : \"{{refreshtoken}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/token/refresh",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generates new JWT using Refresh Token with invalid refresh token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//qase: 5\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify that a client of web service with invalid refresh token when refreshing authorization is able to get a response code 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"var data = JSON.parse(responseBody);\r",
+									"tests[\"Verify that a client of web service with invalid refresh token when refreshing authorization is able to get a message 'Unable to refresh token.'.\"] = data.message === \"Unable to refresh token.\";\r",
+									"\r",
+									"tests[\"Verify Success message is false\"] = data.success === false;\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"refresh_token\" : \"{{invalidtoken}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/token/refresh",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"let url = pm.environment.get('URL');",
+					"url += '/token/';",
+					"",
+					"pm.sendRequest(",
+					"    {",
+					"        url: url,",
+					"        method: 'POST',",
+					"        header: {",
+					"            \"Content-Type\": \"application/json\"",
+					"        },",
+					"        body: {",
+					"            mode: 'raw',",
+					"            raw: JSON.stringify({",
+					"                  \"origin_url\": pm.environment.get('origin_url'),",
+					"                  \"secret_key\": pm.environment.get('secret_key')",
+					"            })",
+					"        }",
+					"    },",
+					"    function (err, response) {",
+					"        pm.environment.set('token', response.json().data.token);",
+					"    },",
+					"",
+					"    function (err, response) {",
+					"        pm.environment.set('refreshtoken', response.json().data.refreshToken);",
+					"    }",
+					");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
