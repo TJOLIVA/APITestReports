@@ -15,7 +15,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 1",
 									"\r",
 									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 200', function () {\r",
 									"    pm.response.to.be.info\r",
@@ -64,7 +63,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 2",
 									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401', function () {\r",
 									"    pm.response.to.have.status(401);\r",
 									"})\r",
@@ -112,7 +110,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 3",
 									"\r",
 									"pm.test('Verify that a client of web service with valid origin url when generating a authtoken is able to get a response code 401', function () {\r",
 									"    pm.response.to.have.status(401);\r",
@@ -159,7 +156,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 4",
 									"\r",
 									"pm.test(\"Verify that a client of web service with valid refresh token when refreshing authorization is able to get a response code 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -207,7 +203,6 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"//qase: 5",
 									"\r",
 									"\r",
 									"pm.test(\"Verify that a client of web service with invalid refresh token when refreshing authorization is able to get a response code 401\", function () {\r",
