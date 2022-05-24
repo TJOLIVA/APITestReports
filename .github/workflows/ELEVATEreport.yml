@@ -1,6 +1,6 @@
 # This workflow will help you to produce an HTML extra test results report
 
-name: with FAILED Newman Test
+name: Newman Run
 on:
   workflow_dispatch:
     inputs:
