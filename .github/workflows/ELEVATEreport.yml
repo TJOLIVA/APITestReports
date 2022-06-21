@@ -17,6 +17,8 @@ on:
         options: 
         - test
         - regression
+env:
+  QASE_PROJ: APIGO
 
 jobs:
   test-api:
