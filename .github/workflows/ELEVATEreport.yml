@@ -10,13 +10,16 @@ on:
         default: 'Sprint 1'
       tags:
         description: 'Test run name'
-      print_tags:
-        description: 'test only'
-        required: true 
-        type: boolean
+      runtype:
+        type: choice
+        description: 'Run type'
+        required: true
+        options: 
+        - test
+        - regression
 env:
-  TEST_OR_NOT: ${{ inputs.print_tags }}
-
+        RUNTYPE: ${{ github.event.inputs.runtype }}
+        QASE_PROJ: PCG
 jobs:
   test-api:
     runs-on: ubuntu-latest
@@ -38,13 +41,22 @@ jobs:
       - name: Install qase reporter
         run: |
           npm install -g newman-reporter-qase
+          
+      - name: check run type
+        run: |
+          if ${RUNTYPE} == test; then
+            echo "QASE_PROJ=PCG"
+          else
+            echo "QASE_PROJ=APIGO"
+          fi
+
         
    # Run the POSTMAN collection
       - name: Run API Tests
         run:
           newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json
           -r qase --reporter-qase-logging 
-          --reporter-qase-projectCode $TEST_OR_NOT
+          --reporter-qase-projectCode $QASE_PROJ
           --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 
           --reporter-qase-runName "API test Execution"
 
