@@ -44,7 +44,7 @@ jobs:
           
       - name: check run type
         if: ${{ github.event.inputs.runtype }} == 'test'
-        run: echo "PCG" >>  $QASE_PROJ
+        run: echo "$QASE_PROJ=PCG"
         
    # Run the POSTMAN collection
       - name: Run API Tests
