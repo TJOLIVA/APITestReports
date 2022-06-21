@@ -10,6 +10,12 @@ on:
         default: 'Sprint 1'
       tags:
         description: 'Test run name'
+      print_tags:
+        description: 'test only'
+        required: true 
+        type: boolean
+env:
+  TEST_OR_NOT: ${{ inputs.print_tags }}
 
 jobs:
   test-api:
@@ -36,4 +42,10 @@ jobs:
    # Run the POSTMAN collection
       - name: Run API Tests
         run:
-          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json -r qase --reporter-qase-logging --reporter-qase-projectCode PCG --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 --reporter-qase-runName "API test Execution"
+          newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json
+          -r qase --reporter-qase-logging 
+          --reporter-qase-projectCode $TEST_OR_NOT
+          --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 
+          --reporter-qase-runName "API test Execution"
+
+
