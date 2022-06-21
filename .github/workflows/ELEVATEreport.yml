@@ -17,15 +17,15 @@ on:
         options: 
         - test
         - regression
-env:
-  QASE_PROJ: APIGO
-
 jobs:
   test-api:
     runs-on: ubuntu-latest
+
     steps:
+
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
       
    # INstall Node on the runner
       - name: Install Node
@@ -41,17 +41,18 @@ jobs:
       - name: Install qase reporter
         run: |
           npm install -g newman-reporter-qase
-          
+     
       - name: check run type
-        if: ${{ github.event.inputs.runtype }} == 'test'
-        run: echo "$QASE_PROJ=PCG"
-        
+        with:
+          variables: |
+          PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "APIGO"
+
    # Run the POSTMAN collection
       - name: Run API Tests
-        run:
+
           newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json
           -r qase --reporter-qase-logging 
-          --reporter-qase-projectCode $QASE_PROJ
+          --reporter-qase-projectCode ${{ env.PROJ }}
           --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 
           --reporter-qase-runName "API test Execution"
 
