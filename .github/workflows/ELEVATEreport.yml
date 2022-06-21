@@ -18,14 +18,11 @@ on:
         - test
         - regression
 jobs:
-  test-api:
+  global-go-api-sample:
     runs-on: ubuntu-latest
-
     steps:
-
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
       
    # INstall Node on the runner
       - name: Install Node
@@ -49,11 +46,11 @@ jobs:
 
    # Run the POSTMAN collection
       - name: Run API Tests
-
           newman run PEAS.collectionPoC.json -e PEAS_QA.environment.json
           -r qase --reporter-qase-logging 
           --reporter-qase-projectCode ${{ env.PROJ }}
           --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4 
           --reporter-qase-runName "API test Execution"
+          --reporter-qase-runName "${{github.event.inputs.logLevel}} - ${{github.event.inputs.tags}}
 
 
