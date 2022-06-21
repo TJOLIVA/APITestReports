@@ -39,10 +39,10 @@ jobs:
         run: |
           npm install -g newman-reporter-qase
      
-      - name: check run type
+      - uses: marcdomain/set-variables@v1
         with:
           variables: |
-          PROJ: "${{ github.event.inputs.runtype }} == test ? "PCG" : "APIGO"
+            PROJ: "${{ github.event.inputs.runtype }} == test ? "PCG" : "APIGO"
 
    # Run the POSTMAN collection
       - name: Run API Tests
