@@ -19,7 +19,7 @@ on:
         - regression
 env:
         RUNTYPE: ${{ github.event.inputs.runtype }}
-        QASE_PROJ: PCG
+
 jobs:
   test-api:
     runs-on: ubuntu-latest
@@ -42,14 +42,12 @@ jobs:
         run: |
           npm install -g newman-reporter-qase
           
-      - name: check run type
-        run: |
-          if ${RUNTYPE} == test; then
-            echo "QASE_PROJ=PCG"
-          else
-            echo "QASE_PROJ=APIGO"
-          fi
-
+      - name: condition 1
+        if: $RUNTYPE == 'test'
+        run: echo "PCG" >>  $QASE_PROJ
+      - name: condition 2
+        if: $RUNTYPE != 'test'
+        run: echo "APIGO" >>  $QASE_PROJ
         
    # Run the POSTMAN collection
       - name: Run API Tests
