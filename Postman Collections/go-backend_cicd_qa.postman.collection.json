@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "accessCodes",
+			"name": "tj_accessCodes",
 			"item": [
 				{
 					"name": "Return health of access codes",
