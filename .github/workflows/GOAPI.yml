@@ -54,7 +54,9 @@ jobs:
       - name: test workflow
         if: ${{ github.event.inputs.runtype == 'test'}} 
         run:
-          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" -r cli,htmlextra
+          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
+          -r cli,htmlextra
+          --reporter-htmlextra-export testResults/htmlreport.html
                     
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
