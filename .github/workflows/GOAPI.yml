@@ -23,11 +23,13 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: check run type
-        uses: marcdomain/set-variables@v1
-        with:
-          variables: |
-            PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "EDUC"
+
+      #- name: check run type
+      #  uses: marcdomain/set-variables@v1
+      #  with:
+      #   variables: |
+      #     PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "EDUC"
+
       
    # INstall Node on the runner
       - name: Install Node
@@ -37,30 +39,32 @@ jobs:
 
     
     # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman
+      - name: Install newman and html reporter
         run: |
           npm install -g newman
-      - name: Install html extra
-        run: |
           npm install -g newman-reporter-htmlextra
-          
-      - name: Install qase reporter
-        run: |
           npm install -g newman-reporter-qase
           
     # Make directory to upload the test results
       - name: Make Directory for results
         run: mkdir -p testResults
         
-   # Run the POSTMAN collection
-      - name: Run API Tests
-        run: newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
-          -r cli,htmlextra,qase 
-          --reporter-htmlextra-export testResults/htmlreport.html 
-          --reporter-qase-logging 
-          --reporter-qase-projectCode ${{ env.PROJ }} 
-          --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4
-          --reporter-qase-runName "${{github.event.inputs.logLevel}} - ${{github.event.inputs.tags}}"
+      - name: regression workflow
+        if: ${{ github.event.inputs.runtype }} == regression
+        run:
+          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
+            -r cli,htmlextra,qase 
+            --reporter-htmlextra-export testResults/htmlreport.html 
+            --reporter-qase-logging 
+            --reporter-qase-projectCode PCG
+            --reporter-qase-apiToken 745a19ec6abd2f5412ad144d2d4547a313a602c4
+            --reporter-qase-runName "${{github.event.inputs.logLevel}} - ${{github.event.inputs.tags}}"
+            
+      - name: test workflow
+        if: ${{ github.event.inputs.runtype }} == test
+        run:
+          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
+            -r cli,htmlextra 
         
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
