@@ -27,7 +27,7 @@ jobs:
         uses: marcdomain/set-variables@v1
         with:
           variables: |
-            PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "APIGO"
+            PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "EDUC"
       
    # INstall Node on the runner
       - name: Install Node
