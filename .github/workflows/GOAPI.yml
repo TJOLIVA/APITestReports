@@ -23,23 +23,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-
-      #- name: check run type
-      #  uses: marcdomain/set-variables@v1
-      #  with:
-      #   variables: |
-      #     PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "EDUC"
-
-      
-   # INstall Node on the runner
+    # Install Node
       - name: Install Node
         uses: actions/setup-node@v2
         with: 
           node-version: '16.x'
-
-    
+          
     # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman and html reporter
+      - name: Install newman and reporters
         run: |
           npm install -g newman
           npm install -g newman-reporter-htmlextra
@@ -50,7 +41,7 @@ jobs:
         run: mkdir -p testResults
         
       - name: regression workflow
-        if: ${{ github.event.inputs.runtype }} == regression
+        if: ${{ github.event.inputs.runtype == 'regression'}} 
         run:
           newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
             -r cli,htmlextra,qase 
@@ -61,11 +52,10 @@ jobs:
             --reporter-qase-runName "${{github.event.inputs.logLevel}} - ${{github.event.inputs.tags}}"
             
       - name: test workflow
-        if: ${{ github.event.inputs.runtype }} == test
+        if: ${{ github.event.inputs.runtype == 'test'}} 
         run:
-          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" 
-            -r cli,htmlextra 
-        
+          newman run "go-backend_cicd_qa.postman_collection.json" -e "go-backend_qa.postman_environment.json" -r cli,htmlextra
+                    
     # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         if: always()
@@ -73,3 +63,10 @@ jobs:
         with: 
           name: "GLOBAL_GO_${{github.event.inputs.tags}}_reports"
           path: testResults
+          
+
+      #- name: check run type
+      #  uses: marcdomain/set-variables@v1
+      #  with:
+      #   variables: |
+      #     PROJ: "${{ github.event.inputs.runtype }}" == "test" ? "PCG" : "EDUC"
