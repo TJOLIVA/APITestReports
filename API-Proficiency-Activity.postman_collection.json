@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "4ac4c0af-5cfe-433b-a946-44ad1456878a",
+		"name": "API-Proficiency-Activity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20046851"
+	},
+	"item": [
+		{
+			"name": "All product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/products",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 2809,\n    \"perPage\": 20,\n    \"page\": 1,\n    \"lastPage\": 141,\n    \"data\": [\n        {\n            \"id\": 10,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 10,\n                \"Name\": \"Teacher Resource Package\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1431,\n                        \"created_at\": \"2010-10-06 14:53:55\"\n                    },\n                    {\n                        \"id\": 1491,\n                        \"created_at\": \"2010-10-06 14:54:01\"\n                    },\n                    {\n                        \"id\": 1435,\n                        \"created_at\": \"2010-10-06 14:54:08\"\n                    },\n                    {\n                        \"id\": 1432,\n                        \"created_at\": \"2010-10-06 14:54:16\"\n                    },\n                    {\n                        \"id\": 1436,\n                        \"created_at\": \"2010-10-06 14:54:22\"\n                    },\n                    {\n                        \"id\": 1490,\n                        \"created_at\": \"2010-10-06 14:54:29\"\n                    },\n                    {\n                        \"id\": 1434,\n                        \"created_at\": \"2010-10-06 14:54:33\"\n                    },\n                    {\n                        \"id\": 1433,\n                        \"created_at\": \"2010-10-06 14:54:36\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521150101\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Cambridge Senior Design & Technology\",\n                \"CMS_Notes\": \"THIS IS THE WRONG ISBN. SEE DIGITAL VERSION.\",\n                \"Description\": \"\",\n                \"Total_Codes\": 8344,\n                \"CreationDate\": \"2010-06-07 16:14:38\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 1005,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-06-07T16:14:38.000+00:00\",\n            \"updated_at\": \"2019-10-30T08:04:47.000+00:00\"\n        },\n        {\n            \"id\": 14,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 14,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": {\n                    \"0\": {\n                        \"id\": 1217,\n                        \"created_at\": \"2010-10-05 13:30:30\"\n                    },\n                    \"2\": {\n                        \"id\": 1213,\n                        \"created_at\": \"2010-10-05 13:30:32\"\n                    },\n                    \"3\": {\n                        \"id\": 1214,\n                        \"created_at\": \"2010-10-05 13:30:33\"\n                    },\n                    \"4\": {\n                        \"id\": 1215,\n                        \"created_at\": \"2010-10-05 13:30:34\"\n                    },\n                    \"5\": {\n                        \"id\": 4426,\n                        \"created_at\": \"2019-10-02 20:16:04\"\n                    }\n                },\n                \"ISBN_13\": \"9780521130455\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Step Forward: Senior Physical Education for Queensland\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use.\",\n                \"Total_Codes\": 6879,\n                \"CreationDate\": \"2010-06-25 16:32:41\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"N\",\n                \"Total_Subscriptions\": 483,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": \"2020-03-06T18:55:48.000+00:00\",\n            \"created_at\": \"2010-06-25T16:32:41.000+00:00\",\n            \"updated_at\": \"2020-03-06T07:55:48.000+00:00\"\n        },\n        {\n            \"id\": 15,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 15,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1321,\n                        \"created_at\": \"2010-10-06 14:45:17\"\n                    },\n                    {\n                        \"id\": 1340,\n                        \"created_at\": \"2010-10-06 14:45:24\"\n                    },\n                    {\n                        \"id\": 1506,\n                        \"created_at\": \"2010-10-06 14:45:31\"\n                    },\n                    {\n                        \"id\": 1339,\n                        \"created_at\": \"2010-10-06 14:45:40\"\n                    },\n                    {\n                        \"id\": 1341,\n                        \"created_at\": \"2010-10-06 14:45:50\"\n                    },\n                    {\n                        \"id\": 2452,\n                        \"created_at\": \"2018-12-06 20:31:14\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521138062\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Food for VCE Units 1&2\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 6954,\n                \"CreationDate\": \"2010-06-29 13:40:23\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 429,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-06-29T13:40:23.000+00:00\",\n            \"updated_at\": \"2020-11-21T06:02:10.000+00:00\"\n        },\n        {\n            \"id\": 18,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 18,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1419,\n                        \"created_at\": \"2010-10-06 14:49:10\"\n                    },\n                    {\n                        \"id\": 1422,\n                        \"created_at\": \"2010-10-06 14:49:17\"\n                    },\n                    {\n                        \"id\": 1420,\n                        \"created_at\": \"2010-10-06 14:49:20\"\n                    },\n                    {\n                        \"id\": 1421,\n                        \"created_at\": \"2010-10-06 14:49:23\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521171021\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential VCE Legal Studies Units 1&2 2nd Edition - PDF/Web\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use.\",\n                \"Total_Codes\": 3486,\n                \"CreationDate\": \"2010-07-22 14:34:03\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 559,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-07-22T14:34:03.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 19,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 19,\n                \"Name\": \"Interactive Textbook and PDF Textbook \",\n                \"Tabs\": [\n                    {\n                        \"id\": 1423,\n                        \"created_at\": \"2010-10-07 16:59:08\"\n                    },\n                    {\n                        \"id\": 1420,\n                        \"created_at\": \"2012-04-19 10:47:04\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511983320\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential VCE Legal Studies Units 1&2 2nd Edition - Interactive Textbook\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 1303,\n                \"CreationDate\": \"2010-07-22 14:40:02\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 126,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-07-22T14:40:02.000+00:00\",\n            \"updated_at\": \"2020-02-26T09:42:06.000+00:00\"\n        },\n        {\n            \"id\": 21,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 21,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1324,\n                        \"created_at\": \"2010-10-06 14:48:08\"\n                    },\n                    {\n                        \"id\": 1343,\n                        \"created_at\": \"2010-10-06 14:48:12\"\n                    },\n                    {\n                        \"id\": 1342,\n                        \"created_at\": \"2010-10-06 14:48:17\"\n                    },\n                    {\n                        \"id\": 1344,\n                        \"created_at\": \"2010-10-06 14:48:21\"\n                    },\n                    {\n                        \"id\": 1550,\n                        \"created_at\": \"2010-10-07 17:04:06\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521138079\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Food for VCE Units 3&4\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 3155,\n                \"CreationDate\": \"2010-08-16 17:00:54\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 437,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-08-16T17:00:54.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 22,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 22,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1426,\n                        \"created_at\": \"2010-10-07 16:57:55\"\n                    },\n                    {\n                        \"id\": 1427,\n                        \"created_at\": \"2010-10-07 16:57:56\"\n                    },\n                    {\n                        \"id\": 1428,\n                        \"created_at\": \"2010-10-07 16:57:57\"\n                    },\n                    {\n                        \"id\": 1429,\n                        \"created_at\": \"2010-10-07 16:57:58\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521171069\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential VCE Legal Studies Units 3&4 2nd PDF/Web\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use.\",\n                \"Total_Codes\": 3465,\n                \"CreationDate\": \"2010-08-27 16:29:27\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 317,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-08-27T16:29:27.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 23,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 23,\n                \"Name\": \"Interactive Textbook and PDF Textbook \",\n                \"Tabs\": [\n                    {\n                        \"id\": 1430,\n                        \"created_at\": \"2010-10-07 16:59:30\"\n                    },\n                    {\n                        \"id\": 1427,\n                        \"created_at\": \"2012-04-19 10:46:14\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511749377\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential VCE Legal Studies Units 3&4 2nd Edition - Interactive Textbook\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 1251,\n                \"CreationDate\": \"2010-08-27 16:38:00\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 64,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-08-27T16:38:00.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 25,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 25,\n                \"Name\": \"Electronic Version\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1355,\n                        \"created_at\": \"2010-10-07 17:07:50\"\n                    },\n                    {\n                        \"id\": 1354,\n                        \"created_at\": \"2010-10-07 17:07:56\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511908057\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Language Toolkit 1 Electronic Version\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this Electronic version for personal use.\",\n                \"Total_Codes\": 4253,\n                \"CreationDate\": \"2010-09-06 16:32:46\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 1472,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-09-06T16:32:46.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 26,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 26,\n                \"Name\": \"Electronic Version\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1356,\n                        \"created_at\": \"2010-10-07 17:08:24\"\n                    },\n                    {\n                        \"id\": 1357,\n                        \"created_at\": \"2010-10-07 17:08:25\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511751943\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Language Toolkit 2 Electronic Version\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this Electronic version for personal use.\",\n                \"Total_Codes\": 4101,\n                \"CreationDate\": \"2010-09-06 16:36:13\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 1336,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-09-06T16:36:13.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 27,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 27,\n                \"Name\": \"Electronic version\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1358,\n                        \"created_at\": \"2010-10-07 17:11:53\"\n                    },\n                    {\n                        \"id\": 1359,\n                        \"created_at\": \"2010-10-07 17:11:54\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511935787\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Language Toolkit 3 Electronic Version\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this Electronic version for personal use.\",\n                \"Total_Codes\": 5512,\n                \"CreationDate\": \"2010-09-06 16:44:58\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 1354,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-09-06T16:44:58.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 28,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 28,\n                \"Name\": \"Electronic Version\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1360,\n                        \"created_at\": \"2010-10-07 17:12:18\"\n                    },\n                    {\n                        \"id\": 1361,\n                        \"created_at\": \"2010-10-07 17:12:19\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511913129\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Language Toolkit 4 Electronic Version\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this Electronic version for personal use.\",\n                \"Total_Codes\": 3051,\n                \"CreationDate\": \"2010-09-06 16:47:20\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 391,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-09-06T16:47:20.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 32,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 32,\n                \"Name\": \"Recipe Calculator\",\n                \"Tabs\": [],\n                \"ISBN_13\": \"\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Recipe Calculators\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 2,\n                \"CreationDate\": \"2010-10-07 17:13:47\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"N\",\n                \"Total_Subscriptions\": 0,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": \"2020-03-06T20:31:03.000+00:00\",\n            \"created_at\": \"2010-10-07T17:13:47.000+00:00\",\n            \"updated_at\": \"2020-03-06T09:31:03.000+00:00\"\n        },\n        {\n            \"id\": 33,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 33,\n                \"Name\": \"Recipe Ingredients Calculator\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1525,\n                        \"created_at\": \"2010-11-10 15:41:04\"\n                    },\n                    {\n                        \"id\": 1528,\n                        \"created_at\": \"2010-11-10 15:41:21\"\n                    },\n                    {\n                        \"id\": 2452,\n                        \"created_at\": \"2012-12-05 11:57:18\"\n                    },\n                    {\n                        \"id\": 2453,\n                        \"created_at\": \"2012-12-05 11:57:26\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521138093\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Food for VCE 1-4 Teacher CD-ROM\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 526,\n                \"CreationDate\": \"2010-10-18 11:20:05\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 60,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-10-18T11:20:05.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 34,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 34,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1389,\n                        \"created_at\": \"2011-02-10 16:40:18\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511978715\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential Maths for the Australian Curriculum Year 7 Digital\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use only.\",\n                \"Total_Codes\": 17122,\n                \"CreationDate\": \"2010-11-16 17:05:44\",\n                \"edumar_titleID\": 2047,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 3805,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-11-16T17:05:44.000+00:00\",\n            \"updated_at\": \"2018-12-12T05:36:20.000+00:00\"\n        },\n        {\n            \"id\": 35,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 35,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1604,\n                        \"created_at\": \"2011-02-10 16:40:31\"\n                    }\n                ],\n                \"ISBN_13\": \"9780511997358\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential Maths for the Australian Curriculum Year 8 Digital\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use only.\",\n                \"Total_Codes\": 18136,\n                \"CreationDate\": \"2010-11-16 17:06:06\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 3970,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-11-16T17:06:06.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 36,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 36,\n                \"Name\": \"Resources\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1389,\n                        \"created_at\": \"2011-02-10 16:17:41\"\n                    },\n                    {\n                        \"id\": 1603,\n                        \"created_at\": \"2011-02-10 16:17:44\"\n                    },\n                    {\n                        \"id\": 1609,\n                        \"created_at\": \"2011-02-10 16:17:49\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521166270\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential Maths for the Australian Curriculum Year 7 - Print\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 48651,\n                \"CreationDate\": \"2010-12-03 14:55:09\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 9206,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-12-03T14:55:09.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 37,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 37,\n                \"Name\": \"PDF Textbook\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1604,\n                        \"created_at\": \"2019-02-14 18:25:09\"\n                    },\n                    {\n                        \"id\": 1824,\n                        \"created_at\": \"2019-02-14 18:25:22\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521178648\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Essential Maths for the Australian Curriculum Year 8 - Print\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"\",\n                \"Total_Codes\": 64552,\n                \"CreationDate\": \"2010-12-03 15:45:40\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 11236,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-12-03T15:45:40.000+00:00\",\n            \"updated_at\": \"2019-02-14T07:25:22.000+00:00\"\n        },\n        {\n            \"id\": 38,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 38,\n                \"Name\": \"Resources\",\n                \"Tabs\": [\n                    {\n                        \"id\": 1580,\n                        \"created_at\": \"2011-02-16 10:30:49\"\n                    },\n                    {\n                        \"id\": 1577,\n                        \"created_at\": \"2011-02-16 10:30:57\"\n                    },\n                    {\n                        \"id\": 1595,\n                        \"created_at\": \"2011-02-16 10:31:07\"\n                    },\n                    {\n                        \"id\": 1597,\n                        \"created_at\": \"2011-02-16 10:31:12\"\n                    },\n                    {\n                        \"id\": 1576,\n                        \"created_at\": \"2011-02-16 10:31:14\"\n                    },\n                    {\n                        \"id\": 1578,\n                        \"created_at\": \"2011-02-16 10:31:15\"\n                    },\n                    {\n                        \"id\": 1579,\n                        \"created_at\": \"2011-02-16 10:31:17\"\n                    }\n                ],\n                \"ISBN_13\": \"9780521188487\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Get Psyched\",\n                \"CMS_Notes\": \"THIS IS THE INCORRECT ISBN. SEE DIGITAL VERSION.\",\n                \"Description\": \"\",\n                \"Total_Codes\": 2625,\n                \"CreationDate\": \"2010-12-03 15:58:19\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 161,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2010-12-03T15:58:19.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        },\n        {\n            \"id\": 39,\n            \"platform_id\": 1,\n            \"metadata\": {\n                \"ID\": 39,\n                \"Name\": \"Health PDF Textbook\",\n                \"Tabs\": [],\n                \"ISBN_13\": \"9780521171731\",\n                \"StaffID\": 2,\n                \"CMS_Name\": \"Jump Start 7&8 PDF Textbook\",\n                \"CMS_Notes\": \"\",\n                \"Description\": \"You are entitled to download and store this PDF Textbook for personal use.\",\n                \"Total_Codes\": 201,\n                \"CreationDate\": \"2011-01-24 11:11:52\",\n                \"edumar_titleID\": 0,\n                \"CMS_Setup_Notes\": \"\",\n                \"CMS_Setup_Complete\": \"Y\",\n                \"Total_Subscriptions\": 125,\n                \"Activate_Page_Message\": \"\"\n            },\n            \"archived_at\": null,\n            \"created_at\": \"2011-01-24T11:11:52.000+00:00\",\n            \"updated_at\": \"2018-09-13T04:03:44.000+00:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "All entitlement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/entitlements",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"entitlements"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All entitlement",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/entitlements",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"entitlements"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"total\": 3655,\r\n    \"perPage\": 20,\r\n    \"page\": 1,\r\n    \"lastPage\": 183,\r\n    \"data\": [\r\n        {\r\n            \"id\": 1025,\r\n            \"product_id\": 10,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": \"SAP-25544455445555556669\",\r\n            \"metadata\": {\r\n                \"ID\": 1025,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 10,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2014-09-30 0:00:00\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": \"500\",\r\n                \"UsageMax\": \"3\",\r\n                \"CMS_Notes\": \"\",\r\n                \"StartDate\": \"2010-10-01 16:30:12\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Activate_Page_Message=NULL Days\",\r\n                \"Total_Codes\": 8328,\r\n                \"CreationDate\": \"2010-06-07 16:14:54.000000\",\r\n                \"PublicMessage\": null,\r\n                \"Public_Message\": \"\",\r\n                \"EndOfYearOffset\": \"1\",\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": \"8\",\r\n                \"Total_Subscriptions\": 1005\r\n            },\r\n            \"created_at\": \"2010-06-07T16:14:54.000+00:00\",\r\n            \"updated_at\": \"2021-03-15T06:58:25.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1029,\r\n            \"product_id\": 14,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1029,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 14,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-09-30 11:57:39.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": \"500\",\r\n                \"UsageMax\": \"250\",\r\n                \"CMS_Notes\": \"\",\r\n                \"StartDate\": \"2010-10-01 11:57:32.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Activate_Page_Message=NULL Days\",\r\n                \"Total_Codes\": 6880,\r\n                \"CreationDate\": \"2010-06-25 16:32:45.000000\",\r\n                \"PublicMessage\": null,\r\n                \"Public_Message\": \"\",\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 482\r\n            },\r\n            \"created_at\": \"2010-06-25T16:32:45.000+00:00\",\r\n            \"updated_at\": \"2019-10-10T08:21:04.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1031,\r\n            \"product_id\": 15,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1031,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 15,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-09-30 12:02:15.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": \"2010-10-01 12:02:07.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 Years Access\",\r\n                \"Total_Codes\": 11516,\r\n                \"CreationDate\": \"2010-06-29 13:40:26.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 428\r\n            },\r\n            \"created_at\": \"2010-06-29T13:40:26.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1034,\r\n            \"product_id\": 18,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1034,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 18,\r\n                \"Type\": \"end-of-year\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-09-30 16:25:24.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": null,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": \"2010-10-01 16:25:17.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Access to PDF and web resources\",\r\n                \"Total_Codes\": 3480,\r\n                \"CreationDate\": \"2010-07-22 14:34:07.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 7,\r\n                \"Total_Subscriptions\": 559\r\n            },\r\n            \"created_at\": \"2010-07-22T14:34:07.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1035,\r\n            \"product_id\": 19,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1035,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 19,\r\n                \"Type\": \"end-of-year\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": null,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"School year\",\r\n                \"Total_Codes\": 1300,\r\n                \"CreationDate\": \"2010-07-22 14:40:16.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 7,\r\n                \"Total_Subscriptions\": 109\r\n            },\r\n            \"created_at\": \"2010-07-22T14:40:16.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1038,\r\n            \"product_id\": 21,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1038,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 21,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-09-30 12:04:25.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": \"500\",\r\n                \"UsageMax\": \"3\",\r\n                \"CMS_Notes\": \"\",\r\n                \"StartDate\": \"2010-10-01 12:04:20.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 Years Access\",\r\n                \"Total_Codes\": 3153,\r\n                \"CreationDate\": \"2010-08-16 17:01:29.000000\",\r\n                \"PublicMessage\": null,\r\n                \"Public_Message\": \"\",\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 437\r\n            },\r\n            \"created_at\": \"2010-08-16T17:01:29.000+00:00\",\r\n            \"updated_at\": \"2021-04-07T08:37:49.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1039,\r\n            \"product_id\": 22,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1039,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 22,\r\n                \"Type\": \"end-of-year\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-09-30 11:44:36.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": null,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": \"2010-10-01 11:44:12.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 Years Access\",\r\n                \"Total_Codes\": 3465,\r\n                \"CreationDate\": \"2010-08-27 16:29:29.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 7,\r\n                \"Total_Subscriptions\": 317\r\n            },\r\n            \"created_at\": \"2010-08-27T16:29:29.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1040,\r\n            \"product_id\": 23,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1040,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 23,\r\n                \"Type\": \"end-of-year\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": null,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Activate_Page_Message=NULL Days\",\r\n                \"Total_Codes\": 1251,\r\n                \"CreationDate\": \"2010-08-27 16:38:01.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 7,\r\n                \"Total_Subscriptions\": 64\r\n            },\r\n            \"created_at\": \"2010-08-27T16:38:01.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1042,\r\n            \"product_id\": 25,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1042,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 25,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"School year\",\r\n                \"Total_Codes\": 4262,\r\n                \"CreationDate\": \"2010-09-06 16:32:51.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 7,\r\n                \"Total_Subscriptions\": 1472\r\n            },\r\n            \"created_at\": \"2010-09-06T16:32:51.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1043,\r\n            \"product_id\": 26,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1043,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 26,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"School year\",\r\n                \"Total_Codes\": 4100,\r\n                \"CreationDate\": \"2010-09-06 16:36:21.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 1336\r\n            },\r\n            \"created_at\": \"2010-09-06T16:36:21.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1044,\r\n            \"product_id\": 27,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1044,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 27,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"VirtualProduct=N Days\",\r\n                \"Total_Codes\": 5521,\r\n                \"CreationDate\": \"2010-09-06 16:45:00.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 1354\r\n            },\r\n            \"created_at\": \"2010-09-06T16:45:00.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1045,\r\n            \"product_id\": 28,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1045,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 28,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"VirtualProduct=N Days\",\r\n                \"Total_Codes\": 3050,\r\n                \"CreationDate\": \"2010-09-06 16:47:23.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 391\r\n            },\r\n            \"created_at\": \"2010-09-06T16:47:23.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1067,\r\n            \"product_id\": 19,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1067,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 19,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 0,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Full access for staff\",\r\n                \"Total_Codes\": 0,\r\n                \"CreationDate\": \"2010-10-13 17:07:04.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"N\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 2\r\n            },\r\n            \"created_at\": \"2010-10-13T17:07:04.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1068,\r\n            \"product_id\": 33,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1068,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 33,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 1825,\r\n                \"UsageMax\": 1,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Duration=1825 Days\",\r\n                \"Total_Codes\": 525,\r\n                \"CreationDate\": \"2010-10-18 11:21:20.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"N\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 60\r\n            },\r\n            \"created_at\": \"2010-10-18T11:21:20.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1070,\r\n            \"product_id\": 33,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1070,\r\n                \"Demo\": \"Y\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 33,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"N\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 0,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"Nick test\",\r\n                \"Total_Codes\": 1,\r\n                \"CreationDate\": \"2010-11-10 16:24:47.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"N\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 0\r\n            },\r\n            \"created_at\": \"2010-11-10T16:24:47.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1072,\r\n            \"product_id\": 34,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1072,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 34,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"School year\",\r\n                \"Total_Codes\": 12121,\r\n                \"CreationDate\": \"2010-11-17 13:32:38.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 3779\r\n            },\r\n            \"created_at\": \"2010-11-17T13:32:38.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1073,\r\n            \"product_id\": 35,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1073,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 35,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": null,\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": null,\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"VirtualProduct=N Days\",\r\n                \"Total_Codes\": 13104,\r\n                \"CreationDate\": \"2010-11-17 13:36:33.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": null,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 3911\r\n            },\r\n            \"created_at\": \"2010-11-17T13:36:33.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1074,\r\n            \"product_id\": 36,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1074,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 36,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2015-05-08 12:39:05.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": \"2014-05-07 12:39:05.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 Years access\",\r\n                \"Total_Codes\": 43502,\r\n                \"CreationDate\": \"2010-12-03 14:55:34.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 9188\r\n            },\r\n            \"created_at\": \"2010-12-03T14:55:34.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1075,\r\n            \"product_id\": 37,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1075,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 37,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-12-31 16:05:11.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": 500,\r\n                \"UsageMax\": 3,\r\n                \"CMS_Notes\": null,\r\n                \"StartDate\": \"2011-01-01 16:05:00.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 Years Access\",\r\n                \"Total_Codes\": 59292,\r\n                \"CreationDate\": \"2010-12-03 15:45:58.000000\",\r\n                \"PublicMessage\": null,\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 11200\r\n            },\r\n            \"created_at\": \"2010-12-03T15:45:58.000+00:00\",\r\n            \"updated_at\": \"2018-09-13T04:03:53.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 1076,\r\n            \"product_id\": 38,\r\n            \"entitlement_type_id\": 1,\r\n            \"enterprise_id\": null,\r\n            \"metadata\": {\r\n                \"ID\": 1076,\r\n                \"Demo\": \"N\",\r\n                \"HmID\": null,\r\n                \"S_ID\": 38,\r\n                \"Type\": \"duration\",\r\n                \"Price\": null,\r\n                \"Active\": \"Y\",\r\n                \"EndDate\": \"2013-12-31 11:49:32.000000\",\r\n                \"QACheck\": \"N\",\r\n                \"StaffID\": 2,\r\n                \"Duration\": \"500\",\r\n                \"UsageMax\": \"3\",\r\n                \"CMS_Notes\": \"\",\r\n                \"StartDate\": \"2011-02-14 11:49:16.000000\",\r\n                \"Visibility\": \"Private\",\r\n                \"Description\": \"3 years access\",\r\n                \"Total_Codes\": 2625,\r\n                \"CreationDate\": \"2010-12-03 15:58:41.000000\",\r\n                \"PublicMessage\": null,\r\n                \"Public_Message\": \"\",\r\n                \"EndOfYearOffset\": 1,\r\n                \"LimitActivation\": \"Y\",\r\n                \"ReleaseEveryNYears\": 1,\r\n                \"EndOfYearBreakPoint\": 8,\r\n                \"Total_Subscriptions\": 161\r\n            },\r\n            \"created_at\": \"2010-12-03T15:58:41.000+00:00\",\r\n            \"updated_at\": \"2019-03-19T07:19:51.000+00:00\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "All batch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/batches",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All batch",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/batches",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"batches"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"total\": 7427,\r\n    \"perPage\": 20,\r\n    \"page\": 1,\r\n    \"lastPage\": 372,\r\n    \"data\": [\r\n        {\r\n            \"id\": 40,\r\n            \"entitlement_id\": 1035,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Card Print Run 1 test update\",\r\n            \"notes\": null,\r\n            \"total_codes\": 500,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-07-22T14:40:36.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 41,\r\n            \"entitlement_id\": 1035,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Card Print Run 1 - Part 2\",\r\n            \"notes\": null,\r\n            \"total_codes\": 600,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-07-26T12:06:06.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 45,\r\n            \"entitlement_id\": 1038,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-08-16T17:01:54.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 46,\r\n            \"entitlement_id\": 1039,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 3465,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-08-27T16:31:28.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 47,\r\n            \"entitlement_id\": 1040,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 1050,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-08-27T16:38:45.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 49,\r\n            \"entitlement_id\": 1042,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-09-06T16:33:21.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 50,\r\n            \"entitlement_id\": 1043,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-09-06T16:41:58.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 51,\r\n            \"entitlement_id\": 1044,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-09-06T16:45:09.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 52,\r\n            \"entitlement_id\": 1045,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-09-06T16:47:43.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 88,\r\n            \"entitlement_id\": 1068,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print run 1\",\r\n            \"notes\": \"Once code is used, users have access forever and ever.\",\r\n            \"total_codes\": 525,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-10-18T11:22:30.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 89,\r\n            \"entitlement_id\": 1070,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Nick's Batch Test - Recipe Calculator\",\r\n            \"notes\": null,\r\n            \"total_codes\": 1,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-11-10T16:25:12.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 90,\r\n            \"entitlement_id\": 1072,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-11-17T13:33:27.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 91,\r\n            \"entitlement_id\": 1073,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print Run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2100,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-11-17T13:36:53.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 92,\r\n            \"entitlement_id\": 1040,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Nick Test\",\r\n            \"notes\": null,\r\n            \"total_codes\": 1,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-11-18T11:58:21.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 93,\r\n            \"entitlement_id\": 1074,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 6000,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-12-03T14:56:06.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 94,\r\n            \"entitlement_id\": 1075,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 6000,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-12-03T15:46:08.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 95,\r\n            \"entitlement_id\": 1076,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 2625,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2010-12-03T15:58:58.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 96,\r\n            \"entitlement_id\": 1077,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print 1 Run\",\r\n            \"notes\": null,\r\n            \"total_codes\": 200,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2011-01-24T11:15:53.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 97,\r\n            \"entitlement_id\": 1078,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print 1 Run\",\r\n            \"notes\": \"For landmark\",\r\n            \"total_codes\": 200,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2011-01-24T11:26:49.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        },\r\n        {\r\n            \"id\": 98,\r\n            \"entitlement_id\": 1079,\r\n            \"proof_pattern_id\": 1,\r\n            \"admin_id\": 2,\r\n            \"name\": \"Print run 1\",\r\n            \"notes\": null,\r\n            \"total_codes\": 220,\r\n            \"expired_at\": null,\r\n            \"created_at\": \"2011-01-27T13:28:09.000+00:00\",\r\n            \"updated_at\": \"2022-04-11T06:07:02.000Z\",\r\n            \"generated_at\": \"2018-09-13T04:08:52.000Z\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "All assignments created by Teacher",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/assignments",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"assignments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All assignments created by Teacher",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"assignments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"total\": 6,\r\n    \"per_page\": 20,\r\n    \"current_page\": 1,\r\n    \"last_page\": 1,\r\n    \"first_page\": 1,\r\n    \"first_page_url\": \"/?page=1\",\r\n    \"last_page_url\": \"/?page=1\",\r\n    \"next_page_url\": null,\r\n    \"previous_page_url\": null,\r\n    \"data\": [\r\n        {\r\n            \"pre\": {\r\n                \"id\": 33,\r\n                \"title\": \"Fractions pre-teach for KC AUTO4\",\r\n                \"parent_id\": null,\r\n                \"status\": \"live\",\r\n                \"created_at\": \"2022-11-08T06:35:52.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:36:04.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356334,\r\n                    \"class_name\": \"KC AUTO4\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 33,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 1,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"pre\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 33,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            },\r\n            \"post\": {\r\n                \"id\": 34,\r\n                \"title\": \"Fractions post-teach for KC AUTO4\",\r\n                \"parent_id\": 33,\r\n                \"status\": \"draft\",\r\n                \"created_at\": \"2022-11-08T06:35:52.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:35:52.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356334,\r\n                    \"class_name\": \"KC AUTO4\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 34,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 2,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"post\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 34,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"pre\": {\r\n                \"id\": 31,\r\n                \"title\": \"Fractions pre-teach for KC AUTO2\",\r\n                \"parent_id\": null,\r\n                \"status\": \"draft\",\r\n                \"created_at\": \"2022-11-08T06:33:53.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:33:53.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356332,\r\n                    \"class_name\": \"KC AUTO2\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 31,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 1,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"pre\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 31,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            },\r\n            \"post\": {\r\n                \"id\": 32,\r\n                \"title\": \"Fractions post-teach for KC AUTO2\",\r\n                \"parent_id\": 31,\r\n                \"status\": \"draft\",\r\n                \"created_at\": \"2022-11-08T06:33:53.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:33:53.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356332,\r\n                    \"class_name\": \"KC AUTO2\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 32,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 2,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"post\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 32,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"pre\": {\r\n                \"id\": 29,\r\n                \"title\": \"Fractions pre-teach for KC AUTO1\",\r\n                \"parent_id\": null,\r\n                \"status\": \"live\",\r\n                \"created_at\": \"2022-11-08T06:29:02.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:29:13.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356331,\r\n                    \"class_name\": \"KC AUTO1\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 29,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 1,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"pre\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 29,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            },\r\n            \"post\": {\r\n                \"id\": 30,\r\n                \"title\": \"Fractions post-teach for KC AUTO1\",\r\n                \"parent_id\": 29,\r\n                \"status\": \"live\",\r\n                \"created_at\": \"2022-11-08T06:29:02.000+00:00\",\r\n                \"updated_at\": \"2022-11-08T06:35:22.000+00:00\",\r\n                \"classes\": {\r\n                    \"id\": 356331,\r\n                    \"class_name\": \"KC AUTO1\",\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 30,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                },\r\n                \"series\": {\r\n                    \"id\": 2,\r\n                    \"topic_id\": 1,\r\n                    \"series_name\": \"Fractions\",\r\n                    \"type\": \"post\",\r\n                    \"is_active\": true,\r\n                    \"created_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"updated_at\": \"2022-10-27T10:21:15.000+00:00\",\r\n                    \"pivots\": {\r\n                        \"id\": 30,\r\n                        \"created_by\": \"go3917620\"\r\n                    }\r\n                }\r\n            }\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Display sessions by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/sessions/{{assignment_id}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sessions",
+						"{{assignment_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Display sessions by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/sessions/{{assignment_id}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"sessions",
+								"{{assignment_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n    \"total\": 11,\r\n    \"per_page\": 20,\r\n    \"current_page\": 1,\r\n    \"last_page\": 1,\r\n    \"first_page\": 1,\r\n    \"first_page_url\": \"/?page=1\",\r\n    \"last_page_url\": \"/?page=1\",\r\n    \"next_page_url\": null,\r\n    \"previous_page_url\": null,\r\n    \"data\": [\r\n        {\r\n            \"id\": 3176,\r\n            \"exercise_id\": 12,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-08T07:02:54.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"c88e1c53-cc58-4647-9b25-df9ccca3a3a6\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:16.000+00:00\",\r\n            \"updated_at\": \"2022-11-08T07:02:44.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3178,\r\n            \"exercise_id\": 13,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-10T02:39:27.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"f4d3acb8-5700-4b41-a6dc-57d392601db8\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:16.000+00:00\",\r\n            \"updated_at\": \"2022-11-10T02:39:27.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3180,\r\n            \"exercise_id\": 14,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-14T08:50:24.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"61878bd0-cea0-4387-ba9e-50db127b2c37\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:16.000+00:00\",\r\n            \"updated_at\": \"2022-11-14T08:50:25.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3182,\r\n            \"exercise_id\": 15,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-14T08:44:03.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"4079ee09-7ba3-43ca-b8fd-17a0d6630ca4\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:16.000+00:00\",\r\n            \"updated_at\": \"2022-11-14T08:44:04.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3184,\r\n            \"exercise_id\": 16,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-14T08:22:10.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"36701b2c-d5bd-435d-897b-e36bbe01360f\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-14T08:22:11.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3185,\r\n            \"exercise_id\": 17,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-10T02:39:31.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"485e1775-6ef7-4028-b647-17f8f1301531\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-10T02:39:31.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3186,\r\n            \"exercise_id\": 18,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-15T04:08:42.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"6d19fb56-7ab8-4bb9-a00f-0eba6e574b84\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-15T04:08:43.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3187,\r\n            \"exercise_id\": 19,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-10T02:39:33.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"6644ab23-8c0c-42ce-b04d-23dabfd570ae\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-10T02:39:33.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3188,\r\n            \"exercise_id\": 20,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-14T08:38:24.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"0aef86e0-b343-4e8d-9dc1-8caa85544ff0\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-14T08:38:25.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3189,\r\n            \"exercise_id\": 21,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-14T09:10:15.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"dbfeb99d-a8c4-43d8-bc1c-dd5c9d21a459\",\r\n                \"interaction_marks\": {\r\n                    \"OaduA\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-14T09:10:16.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 3190,\r\n            \"exercise_id\": 22,\r\n            \"is_finished\": false,\r\n            \"answered_at\": \"2022-11-10T02:39:35.000+00:00\",\r\n            \"metadata\": {\r\n                \"scoring\": {\r\n                    \"finished\": false,\r\n                    \"marksTotal\": 1,\r\n                    \"marksEarned\": 0\r\n                },\r\n                \"session_id\": \"92f849b7-2688-42e3-8e67-e2a0c29b6f80\",\r\n                \"interaction_marks\": {\r\n                    \"zm437\": 1\r\n                }\r\n            },\r\n            \"created_at\": \"2022-11-08T06:29:17.000+00:00\",\r\n            \"updated_at\": \"2022-11-10T02:39:36.000+00:00\",\r\n            \"pivots\": {\r\n                \"user_id\": \"go3917616\",\r\n                \"assessment_name\": \"Fractions post-teach for KC AUTO1\"\r\n            }\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Set an Assignment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/**\r",
+							" * Sector 1\r",
+							" * JSON Basic assertions/validations\r",
+							" */\r",
+							"\r",
+							"//... write code/assertions here\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"/**\r",
+							" * Sector 2\r",
+							" * JSON Schema Validation\r",
+							" */\r",
+							"const schema = {\r",
+							"    //... write code here\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Schema Validation\", function () {\r",
+							"    pm.response.to.have.jsonSchema(schema);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-mock-match-request-body",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"KC API\",\r\n  \"class_id\": 355934,\r\n  \"topic_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/create/assignments",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"create",
+						"assignments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Set an Assignment - Schema Validation Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"KC API\",\r\n  \"class_id\": 355934,\r\n  \"topic_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/create/assignments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"create",
+								"assignments"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"success\": true,\r\n    \"code\": 90004,\r\n    \"status\": 201,\r\n    \"message\": \"Assignment successfully created.\",\r\n    \"description\": \"Received data was created to a new assignment\",\r\n    \"data\": {\r\n        \"pre\": {\r\n            \"id\": 25,\r\n            \"title\": \"KC Green \",\r\n            \"status\": \"draft\",\r\n            \"created_at\": \"2022-10-10T10:28:41.141+00:00\",\r\n            \"updated_at\": \"2022-10-10T10:28:41.141+00:00\",\r\n            \"series\": {\r\n                \"id\": 1,\r\n                \"topic_id\": 1,\r\n                \"series_name\": \"Fractions\",\r\n                \"type\": \"pre\",\r\n                \"is_active\": true,\r\n                \"created_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"updated_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"pivots\": {\r\n                    \"id\": 25,\r\n                    \"created_by\": \"450ae318-212f-4d82-849f-5f77188599f4\"\r\n                }\r\n            },\r\n            \"classes\": {\r\n                \"id\": 355934,\r\n                \"class_name\": \"KC Green\",\r\n                \"created_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"pivots\": {\r\n                    \"id\": 25,\r\n                    \"created_by\": \"450ae318-212f-4d82-849f-5f77188599f4\"\r\n                }\r\n            }\r\n        },\r\n        \"post\": {\r\n            \"id\": 26,\r\n            \"title\": \"KC Green \",\r\n            \"status\": \"draft\",\r\n            \"parent_id\": 25,\r\n            \"created_at\": \"2022-10-10T10:28:41.163+00:00\",\r\n            \"updated_at\": \"2022-10-10T10:28:41.163+00:00\",\r\n            \"series\": {\r\n                \"id\": 2,\r\n                \"topic_id\": 1,\r\n                \"series_name\": \"Fractions\",\r\n                \"type\": \"post\",\r\n                \"is_active\": true,\r\n                \"created_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"updated_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"pivots\": {\r\n                    \"id\": 26,\r\n                    \"created_by\": \"450ae318-212f-4d82-849f-5f77188599f4\"\r\n                }\r\n            },\r\n            \"classes\": {\r\n                \"id\": 355934,\r\n                \"class_name\": \"KC Green\",\r\n                \"created_at\": \"2022-09-27T07:57:06.000+00:00\",\r\n                \"pivots\": {\r\n                    \"id\": 26,\r\n                    \"created_by\": \"450ae318-212f-4d82-849f-5f77188599f4\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}"
+				}
+			]
+		}
+	]
+}
